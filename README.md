@@ -147,7 +147,7 @@ Django is a **web framework**, not a web server, and its maintainers want to mak
 - It has more complete and configurable logging.
 - It’s [well-tested](https://github.com/benoitc/gunicorn/tree/master/tests), specifically for its functionality as an application server.
 
-You can install Gunicorn through `[pip](https://realpython.com/what-is-pip/)` into your virtual environment:
+You can install Gunicorn through [pip](https://realpython.com/what-is-pip/) into your virtual environment:
 
 ```jsx
 $ pwd
