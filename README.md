@@ -4,7 +4,13 @@
 
 To Doo is a backend for a web application that provides various API endpoints for managing agendas and user accounts. This documentation will guide you through the available endpoints and their functionalities.
 
-### Installation
+## Table of Contents
+- [Installation](#installation)
+- [Account Endpoints](#account-endpoints)
+- [Agenda Endpoints](#agenda-endpoints)
+- [Deployment](#deployment)
+
+## Installation
 
 To set up To Doo, follow these steps:
 
