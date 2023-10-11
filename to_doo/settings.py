@@ -157,10 +157,12 @@ REST_FRAMEWORK = {
 
     "DEFAULT_THROTTLE_CLASSES" :[
         'rest_framework.throttling.UserRateThrottle',
+        'rest_framework.throttling.AnonRateThrottle'
     ],
     
     "DEFAULT_THROTTLE_RATES" : {
         'user' : '1000/day',
+        'anon' :  '60/hour',
     },
 
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
