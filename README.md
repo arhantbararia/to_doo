@@ -9,6 +9,7 @@ To Doo is a backend for a web application that provides various API endpoints fo
 - [Account Endpoints](#account-endpoints)
 - [Agenda Endpoints](#agenda-endpoints)
 - [Deployment](#deployment)
+- [Security Measures](#security-measures)
 
 ## Installation
 
@@ -233,3 +234,30 @@ This runs `gunicorn` in the background with the development configuration file `
 ```jsx
 $ tail -f /var/log/gunicorn/dev.log
 ```
+
+## Security Measures
+
+- Protection against DDOS
+    Throttling is enabled for anonymous users to protect against DDOS attacks
+
+- Added Security MiddleWares to prevent attacks like CSRF etc.
+    ```
+    MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    ]
+    ```
+- Throttling Rates:
+
+    ```
+    "DEFAULT_THROTTLE_RATES" : {
+        'user' : '1000/day',
+        'anon' :  '60/hour',
+    }
+    ```
+
