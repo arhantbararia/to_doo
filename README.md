@@ -269,17 +269,17 @@ $ tail -f /var/log/gunicorn/dev.log
 This section contains report for both manual and automated tests conducted on the application.
 - **Unit Tests**
 
-- test_agenda_list_view: PASS
-- test_agenda_detail_view_get: PASS
-- test_agenda_serializer: PASS
+    - test_agenda_list_view: PASS
+    - test_agenda_detail_view_get: PASS
+    - test_agenda_serializer: PASS
 
-- test_authentication: PASS
-- test_register: PASS
-- test_logout: PASS
+    - test_authentication: PASS
+    - test_register: PASS
+    - test_logout: PASS
 
 
 - **Integration Tests**
 
-- test_agenda_detail_api_get: PASS
-- test_agenda_detail_api_put: PASS
-- test_adding_agenda_after_login: PASS
+    - test_agenda_detail_api_get: PASS
+    - test_agenda_detail_api_put: PASS
+    - test_adding_agenda_after_login: PASS
