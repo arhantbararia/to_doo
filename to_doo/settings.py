@@ -24,6 +24,11 @@ load_dotenv()
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
+MYSQL_HOST =  os.environ.get("MYSQL_HOST")
+MYSQL_USER = os.environ.get("MYSQL_USER")
+MYSQL_PASSWORD = os.environ.get("MYSQL_PASSWORD")
+MYSQL_PORT = os.environ.get("MYSQL_PORT")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -91,10 +96,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': "To_do_Data",
-        'USER': 'arhantbararia',
-        'PASSWORD': 'arh123',
-        'HOST':'localhost',
-        'PORT': '3306',
+        'USER': MYSQL_USER,
+        'PASSWORD': MYSQL_PASSWORD,
+        'HOST':MYSQL_HOST,
+        'PORT': MYSQL_PORT,
         
     }
 }
