@@ -45,6 +45,7 @@ This endpoint is used for user authentication. It requires the user's credential
     
     This endpoint allows users to log out and invalidate their authentication token.
     
+Rate Limiting is enabled for this endpoint. See [Security Measures](#security-measures) for details
 
 ## Agenda Endpoints
 
@@ -131,7 +132,8 @@ This endpoint is used for user authentication. It requires the user's credential
 - **DELETE /agenda/view_agenda/<int:agendaID>**
     
     Delete a specific agenda by its agendaID. Use a DELETE request to this endpoint.
-    
+
+Rate Limiting is enabled for this endpoint. See [Security Measures](#security-measures) for details
 
 ## Deployment
 
