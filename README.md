@@ -28,7 +28,7 @@ Run the server locally by running the following command
 	$ python3 manage.py runserver
 ```
 
-or if you went to deploy the application on cloud instance view the Deployment Section
+or if you went to deploy the application on cloud instance view the [Deployment](#deployment) Section
 
 ## Account Endpoints
 
