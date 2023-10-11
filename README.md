@@ -134,6 +134,8 @@ This endpoint is used for user authentication. It requires the user's credential
 
 ## Deployment
 
+First follow [installtion](#installation) on your cloud instance and then proceed with this section.
+
 Django is a **web framework**, not a web server, and its maintainers want to make that distinction clear. In this section, you’ll replace Django’s `runserver` command with [Gunicorn](https://gunicorn.org/). Gunicorn is first and foremost a Python WSGI app server, and a battle-tested one at that:
 
 - It’s fast, optimized, and designed for production.
