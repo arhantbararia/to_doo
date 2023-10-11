@@ -10,7 +10,7 @@ To Doo is a backend for a web application that provides various API endpoints fo
 - [Agenda Endpoints](#agenda-endpoints)
 - [Deployment](#deployment)
 - [Security Measures](#security-measures)
-- [Test Summary]()
+- [Test Summary](#test-summary)
 
 ## Installation
 
