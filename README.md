@@ -137,20 +137,33 @@ Django is a **web framework**, not a web server, and its maintainers want to mak
 
 You can install Gunicorn through `[pip](https://realpython.com/what-is-pip/)` into your virtual environment:
 
-`$ pwd
+```jsx
+$ pwd
 #/home/ubuntu
+```
+
+```jsx
 $ source env/bin/activate
-$ python -m pip install 'gunicorn==20.1.*'`
+```
+
+```jsx
+$ python -m pip install 'gunicorn==20.1.*'
+```
 
 Next, you need to do some level of configuration. The cool thing about a [Gunicorn config file](https://docs.gunicorn.org/en/latest/configure.html)
  is that it just needs to be valid Python code, with variable names 
 corresponding to arguments. You can store multiple Gunicorn 
 configuration files within a project subdirectory:
 
-`$ cd ~/django-gunicorn-nginx
+```jsx
+$ cd ~/to-doo
+```
+
+```jsx
 $ mkdir -pv config/gunicorn/
 #mkdir: created directory 'config'
-#mkdir: created directory 'config/gunicorn/'`
+#mkdir: created directory 'config/gunicorn/
+```
 
 Next, open a development configuration file, `config/gunicorn/dev.py`, and add the following:
 
@@ -179,22 +192,27 @@ daemon = True
 
 Next, make sure that log and PID directories exist for the values set in the Gunicorn configuration file above:
 
-`$ sudo mkdir -pv /var/{log,run}/gunicorn/
+```jsx
+$ sudo mkdir -pv /var/{log,run}/gunicorn/
 #mkdir: created directory '/var/log/gunicorn/'
 #mkdir: created directory '/var/run/gunicorn/'
 $ sudo chown -cR ubuntu:ubuntu /var/{log,run}/gunicorn/
 #changed ownership of '/var/log/gunicorn/' from root:root to ubuntu:ubuntu
-#changed ownership of '/var/run/gunicorn/' from root:root to ubuntu:ubuntu`
+#changed ownership of '/var/run/gunicorn/' from root:root to ubuntu:ubuntu
+```
 
 With these commands, you’ve ensured that the necessary PID and log 
 directories exist for Gunicorn and that they are writable by the `ubuntu` user.
 
 With that out of the way, you can start Gunicorn using the `-c` flag to point to a configuration file from your project root:
 
-`$ pwd
-/home/ubuntu/django-gunicorn-nginx
+```jsx
+$ pwd
+/home/ubuntu/to-doo
 $ source .DJANGO_SECRET_KEY
-$ gunicorn -c config/gunicorn/dev.py`
+$ gunicorn -c config/gunicorn/dev.py
+
+```
 
 You can access application after deployment 
 
@@ -204,4 +222,6 @@ http://<your-public-ip-address>:8000/
 
 This runs `gunicorn` in the background with the development configuration file `dev.py` that you specified above. Just as before, you can now monitor the output file to see the output logged by Gunicorn:
 
-`$ tail -f /var/log/gunicorn/dev.log`
+```jsx
+$ tail -f /var/log/gunicorn/dev.log
+```
