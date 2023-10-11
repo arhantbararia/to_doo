@@ -267,7 +267,7 @@ $ tail -f /var/log/gunicorn/dev.log
 
 ## Test Summary
 This section contains report for both manual and automated tests conducted on the application.
-**Unit Tests**
+- **Unit Tests**
 
 - test_agenda_list_view: PASS
 - test_agenda_detail_view_get: PASS
@@ -278,7 +278,7 @@ This section contains report for both manual and automated tests conducted on th
 - test_logout: PASS
 
 
-**Integration Tests**
+- **Integration Tests**
 
 - test_agenda_detail_api_get: PASS
 - test_agenda_detail_api_put: PASS
